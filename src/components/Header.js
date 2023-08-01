@@ -1,12 +1,13 @@
 import Navbar from './Navbar';
 import logo from '../assets/logo.png';
+import styles from '../styles/Header.module.css';
 
 function Header() {
   return (
-    <header>
-      <div>
-        <img src={logo} alt="Space Travelers' Hub logo" />
-        <h1>Space Travelers&#39; Hub</h1>
+    <header className={styles.header}>
+      <div className={styles.branding}>
+        <img className={styles.logo} src={logo} alt="Space Travelers' Hub logo" />
+        <h1 className={styles.pageTitle}>Space Travelers&#39; Hub</h1>
       </div>
       <Navbar />
     </header>
