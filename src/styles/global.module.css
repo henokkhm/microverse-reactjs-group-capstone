@@ -1,6 +1,6 @@
 body {
-  margin: 0;
-  font-family: 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  min-width: 24rem;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
