@@ -12,7 +12,7 @@ function RocketsList() {
         <Rocket
           key={rocket.id}
           name={rocket.name}
-          type={rocket.type}
+          description={rocket.description}
           imgUrl={rocket.flickr_images[0]}
         />
       ))}

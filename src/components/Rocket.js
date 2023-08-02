@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 
-function Rocket({ name, type, imgUrl }) {
+function Rocket({ name, description, imgUrl }) {
   return (
     <div>
       <div>{name}</div>
-      <div>{type}</div>
+      <div>{description}</div>
       <img src={imgUrl} alt={`${name} rocket`} />
     </div>
   );
@@ -12,7 +12,7 @@ function Rocket({ name, type, imgUrl }) {
 
 Rocket.propTypes = {
   name: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
   imgUrl: PropTypes.string.isRequired,
 };
 
