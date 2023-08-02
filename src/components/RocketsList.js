@@ -7,7 +7,7 @@ function RocketsList() {
   const { rocketsList } = useSelector((store) => store.rockets);
 
   return (
-    <div className={styles.rocketList}>
+    <ul className={styles.rocketList}>
       {rocketsList.map((rocket) => (
         <Rocket
           key={rocket.id}
@@ -16,7 +16,7 @@ function RocketsList() {
           imgUrl={rocket.flickr_images[0]}
         />
       ))}
-    </div>
+    </ul>
   );
 }
 

@@ -4,7 +4,7 @@ import styles from '../styles/Rocket.module.css';
 
 function Rocket({ name, description, imgUrl }) {
   return (
-    <div className={styles.rocketCard}>
+    <li className={styles.rocketCard}>
       <div className={styles.rocketImgWrapper}>
         <img className={styles.rocketImg} src={imgUrl} alt={`${name} rocket`} />
       </div>
@@ -15,7 +15,7 @@ function Rocket({ name, description, imgUrl }) {
           Reserve Rocket
         </button>
       </div>
-    </div>
+    </li>
   );
 }
 
