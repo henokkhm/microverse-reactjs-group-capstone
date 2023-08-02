@@ -1,13 +1,11 @@
-import { useSelector } from 'react-redux';
+import RocketsList from '../components/RocketsList';
 
 function Rockets() {
-  const { rocketsList } = useSelector((store) => store.rockets);
-
   return (
     <section>
       <h2>Rockets</h2>
       <div>Rockets page content</div>
-      <pre>{JSON.stringify(rocketsList, null, 2)}</pre>
+      <RocketsList />
     </section>
   );
 }
