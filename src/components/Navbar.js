@@ -11,6 +11,11 @@ function Navbar() {
             Rockets
           </NavLink>
         </li>
+        <li className={styles.navListItem}>
+          <NavLink className={styles.navLink} to="Missions">
+            Missions
+          </NavLink>
+        </li>
         <li>
           <NavLink
             className={`${styles.navLink} ${styles.myProfileLink}`}
