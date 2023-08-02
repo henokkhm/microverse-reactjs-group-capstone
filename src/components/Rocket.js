@@ -3,9 +3,12 @@ import PropTypes from 'prop-types';
 function Rocket({ name, description, imgUrl }) {
   return (
     <div>
-      <div>{name}</div>
-      <div>{description}</div>
       <img src={imgUrl} alt={`${name} rocket`} />
+      <div>
+        <h3 className={styles.rocketName}>{name}</h3>
+        <p>{description}</p>
+        <button type="button">Reserve Rocket</button>
+      </div>
     </div>
   );
 }
