@@ -17,12 +17,14 @@ function Navbar() {
           </NavLink>
         </li>
         <li>
-          <NavLink
-            className={`${styles.navLink} ${styles.myProfileLink}`}
-            to="/my-profile"
-          >
-            My Profile
-          </NavLink>
+          <li>
+            <NavLink
+              className={({ isActive }) => (isActive ? styles.active : styles.itsActive)}
+              to="/Profile"
+            >
+              My Profile
+            </NavLink>
+          </li>
         </li>
       </ul>
     </nav>
