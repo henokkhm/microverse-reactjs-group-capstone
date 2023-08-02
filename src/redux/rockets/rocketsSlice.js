@@ -10,7 +10,6 @@ export const getRocketsFromAPI = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const resp = await getRockets();
-      console.log(resp);
       // TODO: Store in slice only the following properties
       // id
       // name
