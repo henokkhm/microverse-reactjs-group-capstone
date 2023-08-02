@@ -10,12 +10,13 @@ export const getRocketsFromAPI = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const resp = await getRockets();
-      // TODO: Store in slice only the following properties
-      // id
-      // name
-      // type
-      // flickr_images
-      return resp;
+      const rocketsData = resp.map((rocket) => ({
+        id: rocket.id,
+        name: rocket.name,
+        type: rocket.type,
+        flickr_images: rocket.flickr_images,
+      }));
+      return rocketsData;
     } catch (error) {
       return thunkAPI.rejectWithValue(`Something went wrong! ${error}`);
     }
