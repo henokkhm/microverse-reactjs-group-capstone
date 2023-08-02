@@ -19,7 +19,13 @@
 }
 
 .pageTitle {
-  font-size: 2rem;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 29rem) {
+  .pageTitle {
+    font-size: 2rem;
+  }
 }
 
 @media (min-width: 48rem) {
@@ -30,11 +36,18 @@
   }
 
   .logo {
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
   }
+}
 
+@media (min-width: 52rem) {
   .pageTitle {
     font-size: 2.5rem;
+  }
+
+  .logo {
+    width: 4rem;
+    height: 4rem;
   }
 }
