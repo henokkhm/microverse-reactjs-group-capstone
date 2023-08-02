@@ -8,7 +8,7 @@ function Navbar() {
       <ul className={styles.navList}>
         <li className={styles.navListItem}>
           <NavLink className={styles.navLink} to="/">
-            Home
+            Rockets
           </NavLink>
         </li>
         <li>
