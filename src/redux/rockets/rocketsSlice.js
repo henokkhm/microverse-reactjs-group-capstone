@@ -3,6 +3,8 @@ import getRockets from '../../api/rockets-api';
 
 const initialState = {
   rocketsList: [],
+  isLoadingRockets: false,
+  errorLoadingRockets: false,
 };
 
 export const getRocketsFromAPI = createAsyncThunk(
@@ -13,7 +15,7 @@ export const getRocketsFromAPI = createAsyncThunk(
       const rocketsData = resp.map((rocket) => ({
         id: rocket.id,
         name: rocket.name,
-        type: rocket.type,
+        description: rocket.description,
         flickr_images: rocket.flickr_images,
       }));
       return rocketsData;
@@ -28,9 +30,19 @@ const rocketsSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(getRocketsFromAPI.fulfilled, (state, action) => {
-      state.rocketsList = action.payload;
-    });
+    builder
+      .addCase(getRocketsFromAPI.pending, (state) => {
+        state.isLoadingRockets = true;
+      })
+      .addCase(getRocketsFromAPI.fulfilled, (state, action) => {
+        state.isLoadingRockets = false;
+        state.rocketsList = action.payload;
+        state.errorLoadingRockets = false;
+      })
+      .addCase(getRocketsFromAPI.rejected, (state) => {
+        state.isLoadingRockets = false;
+        state.errorLoadingRockets = true;
+      });
   },
 });
 
