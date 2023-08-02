@@ -2,8 +2,8 @@ import { Routes, Route } from 'react-router-dom';
 
 import styles from './styles/App.module.css';
 import Header from './components/Header';
-import Home from './pages/Home';
 import MyProfile from './pages/MyProfile';
+import Rockets from './pages/Rockets';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <Header />
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Rockets />} />
           <Route path="my-profile" element={<MyProfile />} />
         </Routes>
       </main>
