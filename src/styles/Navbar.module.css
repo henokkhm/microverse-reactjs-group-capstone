@@ -1,0 +1,45 @@
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.navList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.navListItem {
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  color: #1a82fb;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+}
+
+.navLink:hover {
+  transform: scale(1.1);
+}
+
+.navLink:active {
+  transform: translateY(0.125rem);
+}
+
+.myProfileLink {
+  border-left: 1px solid #0b59b1;
+  padding-left: 1rem;
+}
+
+[aria-current='page'] {
+  color: #0b59b1;
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}
