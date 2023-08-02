@@ -1,13 +1,13 @@
 import styles from './styles/App.module.css';
-import logo from './assets/logo.png';
+import Header from './components/Header';
 
 function App() {
   return (
     <div className={styles.app}>
-      <header>
-        <img src={logo} alt="Space Travelers' Hub logo" />
-        <h1>Space Travelers&#39; Hub</h1>
-      </header>
+      <Header />
+      <main>
+        Main Page Content
+      </main>
     </div>
   );
 }
