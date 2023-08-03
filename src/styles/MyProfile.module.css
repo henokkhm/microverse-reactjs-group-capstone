@@ -1,6 +1,25 @@
-.container {
+.myProfileSection {
   display: flex;
-  max-width: 968px;
-  width: 100%;
-  margin: 0 auto;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3rem 0;
+}
+
+.listHeader {
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 38rem) {
+  .myProfileSection {
+    padding: 3rem 2rem;
+    flex-direction: row;
+  }
+
+  .listHeader {
+    font-size: 1.25rem;
+  }
+
+  .listWrapper {
+    width: 50%;
+  }
 }

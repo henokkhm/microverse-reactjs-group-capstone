@@ -18,17 +18,17 @@ function MyProfile() {
     .map(({ id, name }) => ({ id, value: name }));
 
   return (
-    <section className={styles.profiler}>
-      <div>
-        <h3>My Missions</h3>
+    <section className={styles.myProfileSection}>
+      <div className={styles.listWrapper}>
+        <h3 className={styles.listHeader}>My Missions</h3>
         {joinedMissions.length ? (
           <GenericList data={joinedMissions} />
         ) : (
           <p>You have not joined any missions.</p>
         )}
       </div>
-      <div>
-        <h3>My Rockets</h3>
+      <div className={styles.listWrapper}>
+        <h3 className={styles.listHeader}>My Rockets</h3>
         {reservedRockets.length ? (
           <GenericList data={reservedRockets} />
         ) : (

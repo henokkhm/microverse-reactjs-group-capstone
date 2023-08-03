@@ -1,7 +1,16 @@
 .list {
-  color: #000; /* placehoder styles for linter */
+  padding: 0;
+  margin: 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid #e2e1e1;
 }
 
 .listItem {
-  color: #000; /* placehoder styles for linter */
+  padding: 1rem;
+  margin: 0;
+}
+
+.listItem:not(:last-child) {
+  border-bottom: 1px solid #e2e1e1;
 }
