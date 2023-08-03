@@ -60,6 +60,30 @@
   transform: translateY(0.25rem);
 }
 
+.cancelRocketReservationBtn {
+  width: max-content;
+  padding: 1rem 1.5rem;
+  font-size: 1.25rem;
+  border: 2px solid #646363;
+  outline: none;
+  color: rgb(100, 99, 99);
+  border-radius: 0.5rem;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.cancelRocketReservationBtn:hover {
+  background-color: #ebeaea;
+  transform: scale(1.01);
+  color: #444343;
+  border: 2px solid #444343;
+}
+
+.cancelRocketReservationBtn:active {
+  transform: translateY(0.25rem);
+}
+
 @media (min-width: 48rem) {
   .rocketCard {
     flex-direction: row;
