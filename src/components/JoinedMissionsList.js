@@ -1,8 +1,8 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import PropTypes from 'prop-types';
-import styles from '../components/Profiless.module.css';
+import styles from '../styles/JoinedMissionsList.module.css';
 
-function MyMissions({ data }) {
+function JoinedMissionsList({ data }) {
   return (
     <table className="profiler-table">
       {data.length < 0 ? <th>My Missions</th> : <th>My Missions</th>}
@@ -15,5 +15,5 @@ function MyMissions({ data }) {
 
   );
 }
-MyMissions.propTypes = { data: PropTypes.arrayOf(PropTypes.string).isRequired };
-export default MyMissions;
+JoinedMissionsList.propTypes = { data: PropTypes.arrayOf(PropTypes.string).isRequired };
+export default JoinedMissionsList;
