@@ -17,6 +17,7 @@ export const getRocketsFromAPI = createAsyncThunk(
         name: rocket.name,
         description: rocket.description,
         flickr_images: rocket.flickr_images,
+        isReserved: false,
       }));
       return rocketsData;
     } catch (error) {
@@ -28,7 +29,15 @@ export const getRocketsFromAPI = createAsyncThunk(
 const rocketsSlice = createSlice({
   name: 'rockets',
   initialState,
-  reducers: {},
+  reducers: {
+    toggleRocketReservation: (state, { payload }) => {
+      const { id } = payload;
+      const rocketToUpdate = state.rocketsList.find(
+        (rocket) => rocket.id === id,
+      );
+      rocketToUpdate.isReserved = !rocketToUpdate.isReserved;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getRocketsFromAPI.pending, (state) => {
@@ -45,5 +54,7 @@ const rocketsSlice = createSlice({
       });
   },
 });
+
+export const { toggleRocketReservation } = rocketsSlice.actions;
 
 export default rocketsSlice.reducer;
