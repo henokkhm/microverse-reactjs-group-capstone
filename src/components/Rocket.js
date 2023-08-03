@@ -37,8 +37,13 @@ function Rocket({
       </div>
       <div className={styles.rocketCardBody}>
         <h3 className={styles.rocketName}>{name}</h3>
-        <p className={styles.rocketDescription}>{description}</p>
-        {isReserved ? cancelRocketReservationBtn : reserveRocketBtn }
+        <p className={styles.rocketDescription}>
+          {isReserved && (
+            <span className={styles.rocketReservedBadge}>Reserved</span>
+          )}
+          {description}
+        </p>
+        {isReserved ? cancelRocketReservationBtn : reserveRocketBtn}
       </div>
     </li>
   );
