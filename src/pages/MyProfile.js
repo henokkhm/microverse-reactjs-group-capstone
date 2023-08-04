@@ -1,15 +1,14 @@
 import { useSelector } from 'react-redux';
 import GenericList from '../components/GenericList';
 import styles from '../styles/MyProfile.module.css';
-import { selectsAllMissions } from '../redux/mission/misionSlice';
 
 function MyProfile() {
-  const { mission } = useSelector(selectsAllMissions);
-  const joinedMissions = mission
-    .filter((mission) => mission.reservation === true)
+  const { missionsList } = useSelector((store) => store.missions);
+  const joinedMissions = missionsList
+    .filter((mission) => mission.isJoined === true)
     .map((missionData) => ({
-      id: missionData.mission_id,
-      value: missionData.mission_name,
+      id: missionData.id,
+      value: missionData.name,
     }));
 
   const { rocketsList } = useSelector((state) => state.rockets);

@@ -5,7 +5,6 @@ const initialState = {
   missionsList: [],
   isLoadingMissions: false,
   errorLoadingMissions: false,
-  missionsHaveBeenFetched: false,
 };
 
 export const getMissionsFromAPI = createAsyncThunk(
@@ -36,7 +35,7 @@ const MissionSlice = createSlice({
   reducers: {
     toggleMissionJoined: (state, { payload }) => {
       const { id } = payload;
-      const missionToUpdate = state.rocketsList.find(
+      const missionToUpdate = state.missionsList.find(
         (rocket) => rocket.id === id,
       );
       missionToUpdate.isJoined = !missionToUpdate.isJoined;
@@ -51,7 +50,6 @@ const MissionSlice = createSlice({
         state.isLoadingMissions = false;
         state.missionsList = action.payload;
         state.errorLoadingMissions = false;
-        state.missionsHaveBeenFetched = true;
       })
       .addCase(getMissionsFromAPI.rejected, (state) => {
         state.isLoadingMissions = false;
@@ -60,7 +58,6 @@ const MissionSlice = createSlice({
   },
 });
 
-export const { missionsStatus } = MissionSlice.actions;
-export const selectsAllMissions = (state) => state.mission;
+export const { toggleMissionJoined } = MissionSlice.actions;
 
 export default MissionSlice.reducer;
