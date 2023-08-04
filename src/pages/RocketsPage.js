@@ -1,6 +1,6 @@
 import RocketsList from '../components/RocketsList';
 
-function Rockets() {
+function RocketsPage() {
   return (
     <section>
       <RocketsList />
@@ -8,4 +8,4 @@ function Rockets() {
   );
 }
 
-export default Rockets;
+export default RocketsPage;

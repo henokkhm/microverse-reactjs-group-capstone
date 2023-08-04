@@ -4,10 +4,10 @@ import { useDispatch } from 'react-redux';
 
 import { getRocketsFromAPI } from './redux/rockets/rocketsSlice';
 import Header from './components/Header';
-import Rockets from './pages/Rockets';
-import Profile from './pages/MyProfile';
 import styles from './styles/App.module.css';
-import Missions from './components/Missions';
+import RocketsPage from './pages/RocketsPage';
+import MissionsPage from './pages/MissionsPage';
+import MyProfilePage from './pages/MyProfilePage';
 
 function App() {
   const dispatch = useDispatch();
@@ -20,9 +20,9 @@ function App() {
       <Header />
       <main>
         <Routes>
-          <Route path="/" element={<Rockets />} />
-          <Route path="Missions" element={<Missions />} />
-          <Route path="Profile" element={<Profile />} />
+          <Route path="/" element={<RocketsPage />} />
+          <Route path="missions" element={<MissionsPage />} />
+          <Route path="my-profile" element={<MyProfilePage />} />
         </Routes>
       </main>
     </div>
