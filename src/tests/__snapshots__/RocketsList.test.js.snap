@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RocketsList component renders as expected 1`] = `
+<DocumentFragment>
+  <ul
+    class="rocketList"
+  >
+    <li
+      class="rocketCard"
+    >
+      <div
+        class="rocketImgWrapper"
+      >
+        <img
+          alt="[Mock-data] Falcon 1 rocket"
+          class="rocketImg"
+          src="https://imgur.com/DaCfMsj.jpg"
+        />
+      </div>
+      <div
+        class="rocketCardBody"
+      >
+        <h3
+          class="rocketName"
+        >
+          [Mock-data] Falcon 1
+        </h3>
+        <p
+          class="rocketDescription"
+        >
+          Mock Description Falcon 1
+        </p>
+        <button
+          class="reserveRocketBtn"
+          type="button"
+        >
+          Reserve Rocket
+        </button>
+      </div>
+    </li>
+    <li
+      class="rocketCard"
+    >
+      <div
+        class="rocketImgWrapper"
+      >
+        <img
+          alt="[Mock-data] Falcon 9 rocket"
+          class="rocketImg"
+          src="https://farm1.staticflickr.com/929/28787338307_3453a11a77_b.jpg"
+        />
+      </div>
+      <div
+        class="rocketCardBody"
+      >
+        <h3
+          class="rocketName"
+        >
+          [Mock-data] Falcon 9
+        </h3>
+        <p
+          class="rocketDescription"
+        >
+          Mock Description Falcon 9
+        </p>
+        <button
+          class="reserveRocketBtn"
+          type="button"
+        >
+          Reserve Rocket
+        </button>
+      </div>
+    </li>
+  </ul>
+</DocumentFragment>
+`;
