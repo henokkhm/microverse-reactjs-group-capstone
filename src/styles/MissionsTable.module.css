@@ -15,6 +15,18 @@ table {
   border-collapse: collapse;
 }
 
+tbody tr:nth-child(odd) {
+  background-color: #cfcfcf;
+}
+
+tr td:nth-child(3) {
+  min-width: 7rem;
+}
+
+tr td:nth-child(4) > * {
+  min-width: 8rem;
+}
+
 .title {
   width: 10%;
   padding-left: 10px;
@@ -45,15 +57,20 @@ table {
 .member {
   background-color: #18a2b8;
   padding: 0.3rem 0.3rem;
-  font-size: x-small;
+  font-size: 12px;
+  font-weight: 700;
   border-radius: 3px;
+  color: #fff;
 }
 
 .nmember {
   background-color: gray;
   padding: 0.3rem 0.3rem;
-  font-size: x-small;
+  font-size: 12px;
+  font-weight: 700;
   border-radius: 3px;
+  color: #fff;
+  text-transform: uppercase;
 }
 
 .joind {
@@ -68,12 +85,4 @@ table {
   color: red;
   padding: 0.3rem 0.5rem;
   border-radius: 3px;
-}
-
-.grey {
-  background-color: #f2f2f2;
-}
-
-.white {
-  background-color: white;
 }

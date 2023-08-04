@@ -18,6 +18,11 @@
   padding: 0;
 }
 
+.navListItem:last-child {
+  border-left: 1px solid #0b59b1;
+  padding-left: 1rem;
+}
+
 .navLink {
   color: #1a82fb;
   text-decoration: none;
@@ -31,11 +36,6 @@
 
 .navLink:active {
   transform: translateY(0.125rem);
-}
-
-.myProfileLink {
-  border-left: 1px solid #0b59b1;
-  padding-left: 1rem;
 }
 
 [aria-current='page'] {
