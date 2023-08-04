@@ -2,7 +2,7 @@ import RocketsList from '../components/RocketsList';
 
 function RocketsPage() {
   return (
-    <section>
+    <section data-testid="rockets-page-content">
       <RocketsList />
     </section>
   );

@@ -7,17 +7,29 @@ function Navbar() {
     <nav className={styles.navigation}>
       <ul className={styles.navList}>
         <li className={styles.navListItem}>
-          <NavLink className={styles.navLink} to="/">
+          <NavLink
+            className={styles.navLink}
+            to="/"
+            data-testid="navlink-rockets-page"
+          >
             Rockets
           </NavLink>
         </li>
         <li className={styles.navListItem}>
-          <NavLink className={styles.navLink} to="missions">
+          <NavLink
+            className={styles.navLink}
+            to="missions"
+            data-testid="navlink-missions-page"
+          >
             Missions
           </NavLink>
         </li>
         <li className={styles.navListItem}>
-          <NavLink className={styles.navLink} to="my-profile">
+          <NavLink
+            className={styles.navLink}
+            to="my-profile"
+            data-testid="navlink-my-profile-page"
+          >
             My Profile
           </NavLink>
         </li>
