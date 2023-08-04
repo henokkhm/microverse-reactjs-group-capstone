@@ -1,5 +1,4 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
 
 const initialState = {
   missionsList: [],
@@ -15,8 +14,9 @@ export const getMissionsFromAPI = createAsyncThunk(
       return missionsList;
     }
     try {
-      const resp = await axios.get('https://api.spacexdata.com/v3/missions');
-      const missionsData = resp.data.map((mission) => ({
+      const response = await fetch('https://api.spacexdata.com/v3/missions');
+      const data = await response.json();
+      const missionsData = data.map((mission) => ({
         id: mission.mission_id,
         description: mission.description,
         name: mission.mission_name,
