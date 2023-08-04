@@ -86,3 +86,14 @@ tr td:nth-child(4) > * {
   padding: 0.3rem 0.5rem;
   border-radius: 3px;
 }
+
+.loading {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.error {
+  padding-top: 2rem;
+  font-size: 1.2rem;
+  color: rgb(119, 0, 0);
+}
