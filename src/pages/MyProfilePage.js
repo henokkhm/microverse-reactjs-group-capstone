@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import GenericList from '../components/GenericList';
 import styles from '../styles/MyProfile.module.css';
 
-function MyProfile() {
+function MyProfilePage() {
   const { missionsList } = useSelector((store) => store.missions);
   const joinedMissions = missionsList
     .filter((mission) => mission.isJoined === true)
@@ -38,4 +38,4 @@ function MyProfile() {
   );
 }
 
-export default MyProfile;
+export default MyProfilePage;
