@@ -17,7 +17,10 @@ function MyProfilePage() {
     .map(({ id, name }) => ({ id, value: name }));
 
   return (
-    <section className={styles.myProfileSection}>
+    <section
+      className={styles.myProfileSection}
+      data-testid="my-profile-page-content"
+    >
       <div className={styles.listWrapper}>
         <h3 className={styles.listHeader}>My Missions</h3>
         {joinedMissions.length ? (

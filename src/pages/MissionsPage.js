@@ -2,7 +2,7 @@ import MissionsTable from '../components/MissionsTable';
 
 function MissionsPage() {
   return (
-    <section>
+    <section data-testid="missions-page-content">
       <MissionsTable />
     </section>
   );

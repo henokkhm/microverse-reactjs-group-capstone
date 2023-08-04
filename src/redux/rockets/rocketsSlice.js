@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import getRockets from '../../api/rockets-api';
 
 const initialState = {
   rocketsList: [],
@@ -11,8 +10,9 @@ export const getRocketsFromAPI = createAsyncThunk(
   'rockets/getRocketsFromAPI',
   async (_, thunkAPI) => {
     try {
-      const resp = await getRockets();
-      const rocketsData = resp.map((rocket) => ({
+      const response = await fetch('https://api.spacexdata.com/v4/rockets');
+      const data = await response.json();
+      const rocketsData = data.map((rocket) => ({
         id: rocket.id,
         name: rocket.name,
         description: rocket.description,
