@@ -1,15 +1,36 @@
 import { act, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
+import thunk from 'redux-thunk';
+import configureMockStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 
 import App from '../App';
-import store from '../redux/store';
+
+const middlewares = [thunk];
+const mockStore = configureMockStore(middlewares);
+
+const mockData = {
+  rockets: {
+    rocketsList: [],
+    isLoadingRockets: false,
+    errorLoadingRockets: false,
+  },
+  missions: {
+    missionsList: [],
+    isLoadingMissions: false,
+    errorLoadingMissions: false,
+  },
+};
 
 describe('Navigation links -', () => {
   test('clicking on "Rockets" link loads the Rockets page', async () => {
     // ARRANGE
+    const store = mockStore(mockData);
+    const fetchMock = jest.spyOn(global, 'fetch');
+    fetchMock.mockResolvedValueOnce({ json: () => Promise.resolve([]) });
+
     render(
       <Provider store={store}>
         <BrowserRouter>
@@ -27,6 +48,10 @@ describe('Navigation links -', () => {
 
   test('clicking on "Missions" link loads the Missions page', async () => {
     // ARRANGE
+    const store = mockStore(mockData);
+    const fetchMock = jest.spyOn(global, 'fetch');
+    fetchMock.mockResolvedValueOnce({ json: () => Promise.resolve([]) });
+
     render(
       <Provider store={store}>
         <BrowserRouter>
@@ -44,6 +69,10 @@ describe('Navigation links -', () => {
 
   test('clicking on the "My Profile" link loads the My Profile page', async () => {
     // ARRANGE
+    const store = mockStore(mockData);
+    const fetchMock = jest.spyOn(global, 'fetch');
+    fetchMock.mockResolvedValueOnce({ json: () => Promise.resolve([]) });
+
     render(
       <Provider store={store}>
         <BrowserRouter>
