@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The GenericList component renders the list provided as data correctly 1`] = `
+<DocumentFragment>
+  <ul
+    class="list"
+  >
+    <li
+      class="listItem"
+    >
+      first_value
+    </li>
+    <li
+      class="listItem"
+    >
+      second_value
+    </li>
+  </ul>
+</DocumentFragment>
+`;
