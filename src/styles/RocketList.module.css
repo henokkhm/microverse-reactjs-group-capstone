@@ -1,0 +1,24 @@
+.rocketList {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.loading {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.error {
+  padding-top: 2rem;
+  font-size: 1.2rem;
+  color: rgb(119, 0, 0);
+}
+
+@media (min-width: 48rem) {
+  .rocketList {
+    padding: 4rem 0;
+    gap: 3rem;
+  }
+}

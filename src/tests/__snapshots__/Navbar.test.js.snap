@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Navbar component renders correctly 1`] = `
+<DocumentFragment>
+  <nav
+    class="navigation"
+  >
+    <ul
+      class="navList"
+    >
+      <li
+        class="navListItem"
+      >
+        <a
+          aria-current="page"
+          class="navLink active"
+          data-testid="navlink-rockets-page"
+          href="/"
+        >
+          Rockets
+        </a>
+      </li>
+      <li
+        class="navListItem"
+      >
+        <a
+          class="navLink"
+          data-testid="navlink-missions-page"
+          href="/missions"
+        >
+          Missions
+        </a>
+      </li>
+      <li
+        class="navListItem"
+      >
+        <a
+          class="navLink"
+          data-testid="navlink-my-profile-page"
+          href="/my-profile"
+        >
+          My Profile
+        </a>
+      </li>
+    </ul>
+  </nav>
+</DocumentFragment>
+`;
